@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    form(role='form' method='POST' action='http://localhost:3000/upload' enctype="multipart/form-data")
+             div.form-group
+                    label(for='name') Name:
+                    input#name.form-control(type='file', placeholder='image' name='image')
+             button.btn.btn-primary(type="submit", name="submit") Submit
+
